@@ -1,4 +1,4 @@
-SpreeDynamicPromotionExpiryDate
+Spree Dynamic Promotion Expiry Date [Still working. Do not use.]
 ===============================
 
 This extension allows Spree Promotion to expire in the time you set after the user applies the promotion. 
