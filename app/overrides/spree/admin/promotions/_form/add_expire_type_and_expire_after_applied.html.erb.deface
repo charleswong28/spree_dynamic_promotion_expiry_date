@@ -1,0 +1,21 @@
+<!-- insert_after '#general_fields' -->
+<div class='row'> 
+  <div class='col-md-4'>
+    <%= f.field_container :category, class: ['form-group'] do %>
+      <%= f.label :expiry_type %>
+      <%= f.select(:expiry_type, Spree::Promotion.expiry_types.collect { |g| [g[0], g[0]]}, { include_blank: false }, { :class => 'select2' }) %>
+    <% end %>
+  </div>
+  <div class='col-md-4'>
+    <div class="form-group">
+      <%= f.label :expiry_after_applied %>
+      <%= f.number_field :expiry_after_applied, class: 'form-control', placeholder: 'in seconds (e.g. 1 hour = 3600)' %>
+    </div>
+  </div>
+  <div class='col-md-4'>
+    <div class="form-group">
+      <%= f.label :expiry_after_applied_floor_to %>
+      <%= f.number_field :expiry_after_applied_floor_to, class: 'form-control', placeholder: 'in seconds (e.g. 30 minutes = 1800)' %>
+    </div>
+  </div>
+</div>

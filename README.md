@@ -4,14 +4,14 @@ Spree Dynamic Promotion Expiry Date [Still working. Do not use.]
 This extension allows Spree Promotion to expire in the time you set after the user applies the promotion. 
 
 ## Current features: 
-1. Days / Hours / Minutes / Seconds based
+1. After n seconds
   The promotion will expire after the user applies the promotion plus the time you set. 
 
-2. Round to n Days / n Hours / n Minutes / n Seconds with maximum m Days / m Hours / m Minutes / m Seconds
+2. Floor to m seconds with maximum of n Seconds
   
-    For example, if it rounds to 30 minutes and max 1.5 hours, when the user applies the promotion at 14:53, the promotino will end in 16:00. If it rounds 1 hour with max 5 hours, when the user applies the promotion at 03:35, the promotion will end in 08:00. 
+    For example, if it floors to 30 minutes (m = 1,800) and max 1.5 hours (n = 5,400), when the user applies the promotion at 14:53, the promotino will end in 16:00. If it floors 1 hour (m = 3,600) with max 5 hours (n = 18,000), when the user applies the promotion at 03:35, the promotion will end in 08:00. 
   
-    If it rounds to 1 day with maximum of 1 day and 1 hour, when the user applies the promotion at 07/08/2017 23:59, the promotion ends in 09/08/2017 00:00. When the user applies the promotion at 07/08/2017 05:13, the promotion ends in 08/08/2017 00:00. 
+    If it floors to 1 day (m = 86,400) with maximum of 1 day and 1 hour (n = 90,000), when the user applies the promotion at 07/08/2017 23:59, the promotion ends in 09/08/2017 00:00. When the user applies the promotion at 07/08/2017 05:13, the promotion ends in 08/08/2017 00:00. 
   
     This feature is for marketing gimmick giving out discount to certain path every n hours. 
 
