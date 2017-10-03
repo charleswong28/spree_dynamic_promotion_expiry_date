@@ -40,9 +40,10 @@ This extension allows Spree Promotion to expire in the time you set after the us
   If your server was running, restart it so that it can find the assets properly.
 
 ## TO-DO
-1. Testing 
+1. Test case
 2. Front-end
   We use react in our front-end. We may need to create another project to work on this. 
+3. Support releases other than 3-1-stable
 
 ## Testing
 
