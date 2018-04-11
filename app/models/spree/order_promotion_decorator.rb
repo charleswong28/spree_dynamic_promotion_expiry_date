@@ -1,6 +1,8 @@
 module Spree
   OrderPromotion.class_eval do
     def expires_at
+      return null if !promotion
+
       if promotion.expiry_type == 'after_applied' && created_at
         created_at + promotion.expiry_after_applied.seconds
       elsif promotion.expiry_type == 'after_applied_with_floor_to' && created_at
